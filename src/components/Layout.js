@@ -6,7 +6,7 @@ import GlobalStyle from '../styles/global'
 import theme from '../styles/theme'
 import config from '../utils/siteConfig'
 import Menu from '../components/Menu'
-import Footer from '../components/Footer'
+import Footer from '../components/Footers'
 import ContactForm from '../components/ContactForm'
 
 const Template = ({ children }) => {
@@ -26,7 +26,7 @@ const Template = ({ children }) => {
             {children}
           </div>
           <ContactForm />
-          <Footer />
+          <Footer/>
         </>
       </ThemeProvider>
       <GlobalStyle />

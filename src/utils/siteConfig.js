@@ -2,6 +2,8 @@ module.exports = {
   siteTitle: 'Software Factory',
   siteTitleAlt: 'Software Factory', // This allows an alternative site title for SEO schema.
   publisher: 'Publisher named Sonixc', // Organization name used for SEO schema
+  yearOfCreation: '2009',
+  siteEmail:'info@softwarefactory',
   siteDescription:
     'A starter template to build amazing static websites with Gatsby, Contentful and Netlify',
   siteUrl: 'https://softwarefactory.netlify.com', // Site domain. Do not include a trailing slash! If you wish to use a path prefix you can read more about that here: https://www.gatsbyjs.org/docs/path-prefix/
@@ -18,4 +20,5 @@ module.exports = {
   backgroundColor: '#e9e9e9', // Used for Offline Manifest
   themeColor: '#121212', // Used for Offline Manifest
   copyright: 'Copyright © 2018 Sonixc User', // Copyright string for the RSS feed
+  menuTitle: ['home','contact','web'], // Copyright string for the RSS feed
 }
