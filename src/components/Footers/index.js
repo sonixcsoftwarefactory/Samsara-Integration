@@ -27,6 +27,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   margin-top:10px;
   margin-bottom:20px;
+  margin-top: 200px;
   max-width: ${props => props.theme.sizes.maxWidth};
 `
 
@@ -291,9 +292,36 @@ const Footer = () => (
                            siteUrl={config.siteUrl}>{config.siteTitle}
         </CopyRight></strong>
         <ul >
-          <li css={css` display:inline-block; margin: 10px;`}>Terms of Use</li>
-          <li css={css` display:inline-block; margin: 10px;`}>Privacy Policy</li>
-          <li css={css` display:inline-block; margin: 10px;`}>SiteMap</li>
+          <li css={css` display:inline-block; margin: 10px; color:white;`}>
+            <a
+              css={css` text-decoration:none; color:white;`}
+              href='/Terms/'
+              rel="_blank"
+              target="noopener noreferrer"
+            >
+              Terms of Use
+            </a>
+          </li>
+          <li css={css` display:inline-block; margin: 10px;`}>
+            <a
+              css={css` text-decoration:none; color:white;`}
+              href='/Terms/'
+              rel="_blank"
+              target="noopener noreferrer"
+            >
+              Privacy Policy
+            </a>
+          </li>
+          <li css={css` display:inline-block; margin: 10px;`}>
+            <a
+              css={css` text-decoration:none; color:white;`}
+              href='/Terms/'
+              rel="_blank"
+              target="noopener noreferrer"
+            >
+              SiteMap
+            </a>
+          </li>
         </ul>
     </SubFooter>
 

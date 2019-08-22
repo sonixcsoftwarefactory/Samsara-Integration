@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
+
+
 const Header = styled.header`
   background: ${props => props.theme.colors.base};
   width: 100%;
@@ -76,6 +78,7 @@ const Menu = () => {
           </li>
         </ul>
       </Nav>
+
     </Header>
   )
 }

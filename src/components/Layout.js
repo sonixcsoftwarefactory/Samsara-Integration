@@ -7,9 +7,10 @@ import theme from '../styles/theme'
 import config from '../utils/siteConfig'
 import Menu from '../components/Menu'
 import Footer from '../components/Footers'
+import Menus from '../components/Menus'
 import ContactForm from '../components/ContactForm'
 
-const Template = ({ children }) => {
+const Template = ( props ) => {
   return (
     <div className="siteRoot">
       <Helmet>
@@ -22,8 +23,8 @@ const Template = ({ children }) => {
       <ThemeProvider theme={theme}>
         <>
           <div className="siteContent">
-            <Menu />
-            {children}
+            <Menus imgSrc={props.headerImage}/>
+            {props.children}
           </div>
           <ContactForm />
           <Footer/>

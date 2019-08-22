@@ -4,27 +4,27 @@ import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
-import ContactForm from '../components/ContactForm'
 import SEO from '../components/SEO'
+import headerImage from '../images/applicationDevelopment.png'
 
-const Contact = ({ data }) => {
+const Terms = ({ data }) => {
   const postNode = {
-    title: `Contact - ${config.siteTitle}`,
+    title: `Term - ${config.siteTitle}`,
   }
 
   return (
-    <Layout>
+    <Layout headerImage={headerImage}>
       <Helmet>
-        <title>{`Contact - ${config.siteTitle}`}</title>
+        <title>{`Term - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="contact" customTitle />
+      <SEO postNode={postNode} pagePath="Term" customTitle />
 
       <Container>
-        <PageTitle>Contact Pageeeee</PageTitle>
-        <ContactForm />
+        <PageTitle>Term Pageeeee</PageTitle>
+
       </Container>
     </Layout>
   )
 }
 
-export default Contact
+export default Terms

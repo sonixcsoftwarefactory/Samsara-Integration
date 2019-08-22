@@ -8,6 +8,7 @@ import Container from '../components/Container'
 import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
 import config from '../utils/siteConfig'
+import headerImage from '../images/applicationDevelopment.png'
 
 const Index = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
@@ -16,7 +17,7 @@ const Index = ({ data, pageContext }) => {
   const isFirstPage = currentPage === 1
 
   return (
-    <Layout>
+    <Layout headerImage={headerImage}>
       <SEO />
       {!isFirstPage && (
         <Helmet>
