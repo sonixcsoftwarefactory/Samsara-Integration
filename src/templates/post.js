@@ -10,6 +10,7 @@ import TagList from '../components/TagList'
 import PostLinks from '../components/PostLinks'
 import PostDetails from '../components/PostDetails'
 import SEO from '../components/SEO'
+import headerImage2 from '../images/applicationDevelopment.png'
 
 const PostTemplate = ({ data, pageContext }) => {
   const {
@@ -26,13 +27,13 @@ const PostTemplate = ({ data, pageContext }) => {
   const next = pageContext.next
 
   return (
-    <Layout>
+    <Layout headerImage={heroImage.fluid.src}>
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} postSEO />
 
-      <Hero title={title} image={heroImage} height={'50vh'} />
+      {/*<Hero title={title} image={heroImage} height={'50vh'} />*/}
 
       <Container>
         {tags && <TagList tags={tags} />}

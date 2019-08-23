@@ -129,7 +129,7 @@ const Menu = (props) => {
             </Link>
           </li>
           <li>
-            <Link to="/" activeStyle={activeLinkStyle}>
+            <Link to="/Experts/" activeStyle={activeLinkStyle}>
               Experties
             </Link>
           </li>
