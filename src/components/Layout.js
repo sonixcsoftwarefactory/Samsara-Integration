@@ -26,7 +26,7 @@ const Template = ( props ) => {
             <Menus imgSrc={props.headerImage}/>
             {props.children}
           </div>
-          <ContactForm />
+
           <Footer/>
         </>
       </ThemeProvider>

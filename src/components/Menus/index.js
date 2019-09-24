@@ -1,9 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import PageTitle from '../PageTitle'
-import Container from '../Container'
+import logo from '../../images/logoBlack.svg'
+import backgroundlogo from '../../images/golden_background_factory_software_development.svg'
+import { css } from '@emotion/core'
+// import PageTitle from '../PageTitle'
+// import Container from '../Container'
 
+const userInput = '../../images/golden_background_factory_software_development.svg'
 // orange boader button
 const LinkButtonTo = props => (
   <a style={{ textDecoration:`none`,color:`#ed993e`,border:`solid 1px #ed993e`,padding:'5px 10px 5px 10px'}}
@@ -17,9 +21,12 @@ const LinkButtonTo = props => (
 
 const ImageWrapper = styled.div`
   border: 1px #ffffff00;
-  height:500px;
   display: flex;
 `
+
+const logoImg = styled.img.attrs({
+  src: 'image url here'
+})
 
 const HeaderImg = styled.img.attrs({
   src: 'image url here'
@@ -27,12 +34,31 @@ const HeaderImg = styled.img.attrs({
   width:auto;
   height:auto;
   margin: auto; 
+  margin-top: -105px !important;
+  border: 1px #ffffff00;
+  z-index: -1;
+`
+
+const logoImage2 = styled.img.attrs({
+  src: 'image url here'
+})`
+  width:auto;
+  height:auto;
+  margin: auto; 
   border: 1px #ffffff00;
 `
+
 // border: 1px solid #ffffff00;
 
+// background: url(${userInput});
+// background-repeat: no-repeat !important;
+// background-size: cover;
+// height: 600px;
+// background-position: center !important;
+// background: ${props => props.theme.colors.base_white};
+
 const Header = styled.header`
-  background: ${props => props.theme.colors.base};
+  position: absolute !imortant;
   width: 100%;
   padding: 1.5em 0;
 `
@@ -50,7 +76,7 @@ const Nav = styled.nav`
   }
 
   li {
-  
+    text-decoration: none !important;
     display: inline-block;
     margin-left: 1em;
     &:first-child {
@@ -66,26 +92,29 @@ const Nav = styled.nav`
   }
 
   a {
-    text-decoration: none;
-    color: DarkGray;
+    text-decoration: none !important;
+    color: black;
     font-weight: 600;
     transition: all 0.2s;
-    border-bottom: 2px solid ${props => props.theme.colors.base};
     &:hover {
-      color: white;
+      color: black;
+      border-Bottom: solid 1px rgb(237, 153, 62);
     }
   }
 `
-
+// DarkGray
 const activeLinkStyle = {
-  color: 'white',
+  color: 'black',
   borderBottom: 'solid 1px rgb(237, 153, 62)',
 }
 
 const Menu = (props) => {
   console.log(props)
+  console.log(props.backgroundlogo)
+  console.log(props.imgSrc)
   return (
     <Header>
+      {/*css={css`background-image: url(${props.imgSrc})`}*/}
       <Nav>
         <ul>
           <li>
@@ -96,16 +125,16 @@ const Menu = (props) => {
               About us
             </Link>
           </li>
-          <li>
-            <Link to="/" activeStyle={activeLinkStyle}>
-              Events
-            </Link>
-          </li>
-          <li>
-            <Link to="/Careers/" activeStyle={activeLinkStyle}>
-              Careers
-            </Link>
-          </li>
+          {/*<li>*/}
+          {/*  <Link to="/" activeStyle={activeLinkStyle}>*/}
+          {/*    Events*/}
+          {/*  </Link>*/}
+          {/*</li>*/}
+          {/*<li>*/}
+          {/*  <Link to="/Careers/" activeStyle={activeLinkStyle}>*/}
+          {/*    Careers*/}
+          {/*  </Link>*/}
+          {/*</li>*/}
           <li>
             <Link to="/contact/" activeStyle={activeLinkStyle}>
               Contact
@@ -124,20 +153,50 @@ const Menu = (props) => {
 
         <ul>
           <li>
-            <Link to="/" activeStyle={activeLinkStyle}>
-              Sonixccc
-            </Link>
+            <div to="/" activeStyle={activeLinkStyle}>
+              <div css={css`display: flex;`}>
+                <div css={css`font-size: 20px;
+                  font-weight: bold;`}>
+                  SONIXC
+                </div>
+                <div css={css` width: 50px;
+                  height: 50px;
+                  margin-top: -15px;
+                  margin-left: 13px;
+                  margin-right: 13px;`}>
+                  <img src={logo}/>
+                </div>
+                <div css={css`font-size: 20px;
+                  font-weight: bold;`}>
+                  Software Factory
+                </div>
+
+              </div>
+            </div>
+            {/*<Link to="/" activeStyle={activeLinkStyle}>*/}
+            {/*  <div css={css`display: flex;`}>*/}
+            {/*    <string>Sonixc</string>*/}
+            {/*    <div css={css` width: 50px;*/}
+            {/*      height: 50px;*/}
+            {/*      margin-top: -15px;*/}
+            {/*      margin-left: 13px;*/}
+            {/*      margin-right: 13px;`}>*/}
+            {/*      <img src={logo}/>*/}
+            {/*    </div>*/}
+            {/*    Software Factory*/}
+            {/*  </div>*/}
+            {/*</Link>*/}
           </li>
-          <li>
-            <Link to="/Experts/" activeStyle={activeLinkStyle}>
-              Experties
-            </Link>
-          </li>
-          <li>
-            <Link to="/" activeStyle={activeLinkStyle}>
-              Case Studies
-            </Link>
-          </li>
+          {/*<li>*/}
+          {/*  <Link to="/Experts/" activeStyle={activeLinkStyle}>*/}
+          {/*    Experties*/}
+          {/*  </Link>*/}
+          {/*</li>*/}
+          {/*<li>*/}
+          {/*  <Link to="/" activeStyle={activeLinkStyle}>*/}
+          {/*    Case Studies*/}
+          {/*  </Link>*/}
+          {/*</li>*/}
           <li>
             <Link to="/" activeStyle={activeLinkStyle}>
               Blog
@@ -145,6 +204,9 @@ const Menu = (props) => {
           </li>
         </ul>
       </Nav>
+      {/*<ImageWrapper>*/}
+      {/*  <HeaderImg src={backgroundlogo}></HeaderImg>*/}
+      {/*</ImageWrapper>*/}
       <ImageWrapper>
         <HeaderImg src={props.imgSrc}></HeaderImg>
       </ImageWrapper>

@@ -139,44 +139,5 @@ exports.createPages = ({ graphql, actions }) => {
   })
 
 
-
-
-  const loadExperts = new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allContentfulExpertise {
-          edges {
-            node {
-              title
-              slug
-              heroImage {
-                id
-                fluid {
-                  src
-                }
-              }
-            }
-          }
-        }
-      }
-    `).then(result => {
-      const Experts = result.data.allContentfulExpertise.edges
-      Experts.map(({ node }) => {
-        createPage({
-          path: `${node.slug}/`,
-          component: path.resolve(`./src/templates/expertt.js`),
-          context: {
-            slug: node.slug,
-            title: node.title,
-            heroImage: node.heroImage,
-          },
-        })
-      })
-      resolve()
-    })
-  })
-
-
-
-  return Promise.all([loadPosts, loadTags, loadPages, loadExperts])
+  return Promise.all([loadPosts, loadTags, loadPages])
 }

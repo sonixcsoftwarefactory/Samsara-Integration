@@ -1,6 +1,7 @@
 
 export const theme = {
   colors: {
+    base_white: 'rgb(255, 255, 255)', // white
     base: '#121212', // Black
     secondary: '#e9e9e9', // Medium Gray
     tertiary: '#f3f3f3', // Light Gray

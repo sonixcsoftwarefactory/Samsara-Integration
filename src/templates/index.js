@@ -15,8 +15,9 @@ const Index = ({ data, pageContext }) => {
   const { currentPage } = pageContext
   const isFirstPage = currentPage === 1
   const imageReference = featuredPost.heroImage
+  // headerImage={imageReference.fluid.src}
   return (
-    <Layout headerImage={imageReference.fluid.src}>
+    <Layout>
       <SEO />
       {!isFirstPage && (
         <Helmet>
