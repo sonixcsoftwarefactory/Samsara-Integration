@@ -79,7 +79,7 @@ const ContactCardH = () => (
                     `}>
       <div css={css`color: #e9f0f4;
         letter-spacing: -0.29px;`}>
-        Get in contact
+        Get in Contact
       </div>
       <div css={css`color: #546264;
         letter-spacing: -0.29px;`}>
