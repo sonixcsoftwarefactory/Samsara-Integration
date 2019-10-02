@@ -202,6 +202,7 @@ class ContactForm extends React.Component {
       firstname:'',
       lastname:'',
       phoneno:'',
+      telNumber: '',
       company:'',
       jobTitle:'',
       checkBoxSonixcITContact:false,
@@ -253,6 +254,7 @@ class ContactForm extends React.Component {
       company:'',
       jobTitle:'',
       email: '',
+      telNumber: '',
       showModal: true,
       checkBoxSonixcITContact:false,
       checkBoxPersonalDataProcessing:false,
@@ -316,14 +318,29 @@ class ContactForm extends React.Component {
           required
         />
 
-        <FieldLabel for="Phoneno">
+        {/*<FieldLabel for="Phoneno">*/}
+        {/*  PHONE NUMBER*/}
+        {/*</FieldLabel>*/}
+        {/*<FullLengthField*/}
+        {/*  name="Phoneno"*/}
+        {/*  type="tel"*/}
+        {/*  placeholder="+"*/}
+        {/*  value={this.state.phoneno}*/}
+        {/*  onChange={this.handleInputChange}*/}
+        {/*  required*/}
+        {/*/>*/}
+
+
+        <FieldLabel for="telNumber">
           PHONE NUMBER
         </FieldLabel>
         <FullLengthField
-          name="Phoneno"
+          name="telNumber"
           type="tel"
-          placeholder="+"
-          value={this.state.phoneno}
+          pattern="[0-9]{3}[-][0-9]{3}[-][0-9]{7}[-][0-9]{1}"
+          placeholder="049-176-4762885-8"
+          title="Follow this pattern, 049-176-4762885-8"
+          value={this.state.telNumber}
           onChange={this.handleInputChange}
           required
         />
