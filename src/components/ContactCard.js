@@ -270,11 +270,13 @@ class ContactForm extends React.Component {
     return (
       <Form
         name="contact"
+        method="Post"
         onSubmit={this.handleSubmit}
         data-netlify="true"
         data-netlify-honeypot="bot"
         overlay={this.state.showModal}
         onClick={this.closeModal}
+        action="/about/"
       >
         <input type="hidden" name="form-name" value="contact" />
         <p hidden>
