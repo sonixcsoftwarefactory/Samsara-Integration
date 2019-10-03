@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { css } from '@emotion/core'
-import Checkbox from '@material-ui/core/Checkbox';
 
 /*
   ⚠️ This is an example of a contact form powered with Netlify form handling.
@@ -211,17 +210,17 @@ class ContactForm extends React.Component {
     }
   }
 
-  handleChangeCheckbox = event => {
+  handleCheckboxInputChange = event => {
     const target = event.target
     console.log(target.name)
-    console.log(target.checked)
+    console.log(target.value)
+    const value = target.value
     const name = target.name
-    const value = !target.checked
     this.setState({
-      [name]: value,
+      [name]: value
     })
-  }
 
+  }
 
   handleInputChange = event => {
     const target = event.target
@@ -371,55 +370,26 @@ class ContactForm extends React.Component {
           required
         />
 
-        {/*<div className="checkbox">*/}
-        {/*  <label>*/}
-        {/*    <input*/}
-        {/*      type="checkbox"*/}
-        {/*    />*/}
-
-        {/*    check to accept*/}
-        {/*  </label>*/}
-        {/*</div>*/}
-
-        {/*<input name="employed" type="checkbox" value="false"/>*/}
         <label>
-          {/*<input*/}
-          {/*  name="checkBoxSonixcITContact"*/}
-          {/*  type="checkbox"*/}
-          {/*  placeholder="Message"*/}
-          {/*  checked={this.state.checkBoxSonixcITContact}*/}
-          {/*  onChange={this.handleCheckboxInputChange} />*/}
-          <Checkbox
+          <input
             name="checkBoxSonixcITContact"
+            type="checkbox"
+            placeholder="Message"
             checked={this.state.checkBoxSonixcITContact}
-            onChange={this.handleChangeCheckbox}
-            value="checkBoxSonixcITContact"
-            inputProps={{
-              'aria-label': 'primary checkbox',
-            }}
-          />
-          {/*vertical-align: super;*/}
+            onChange={this.handleCheckboxInputChange} />
           <span css={css`font-size: 14px !important;
+                      vertical-align: super;
                       font-weight: 500 !important;`}>I agree to be included into sonixc IT systems for the purpose of being contacted.</span>
         </label>
         <label>
-          {/*<input*/}
-          {/*  name="checkBoxPersonalDataProcessing"*/}
-          {/*  type="checkbox"*/}
-          {/*  placeholder="Message"*/}
-          {/*  checked={this.state.checkBoxPersonalDataProcessing}*/}
-          {/*  onChange={this.handleCheckboxInputChange} />*/}
-          <Checkbox
+          <input
             name="checkBoxPersonalDataProcessing"
+            type="checkbox"
+            placeholder="Message"
             checked={this.state.checkBoxPersonalDataProcessing}
-            onChange={this.handleChangeCheckbox}
-            value="checkBoxPersonalDataProcessing"
-            inputProps={{
-              'aria-label': 'primary checkbox',
-            }}
-          />
-          {/*vertical-align: super;*/}
+            onChange={this.handleCheckboxInputChange} />
           <span css={css`font-size: 14px !important;
+                      vertical-align: super;
                       font-weight: 500 !important;`}>I am informed about processing of my personal data and the right to withdraw my consent.</span>
         </label>
         <div css={css`margin: 20px 3px 20px 3px !important;
